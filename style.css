@@ -1,0 +1,165 @@
+body {
+    font-family: "Poppins", sans-serif;
+}
+
+.container {
+    margin: 0 auto;
+}
+
+.first-wrapper {
+    background-repeat: no-repeat;
+    background-position: center right;
+    background-size: 60%;
+    background-image: url(https://cdn-f.heylink.me/static/img/localised-page/mobile_phone/en_US.webp);
+}
+
+.link-det {
+    border-radius: 8px;
+
+    & span {
+        background-color: white;
+    }
+}
+
+.sidebar-discover {
+    transition: 1s all ease-out;
+
+    & .list {
+        transition-delay: 0.1s;
+        transition: 0.4s all ease-out;
+        transform-origin: top;
+        transform: scaleY(0);
+
+        &.active {
+            transform: scaleY(1);
+
+        }
+    }
+
+}
+
+.help-info,
+.discover-info {
+    border-radius: 8px;
+    z-index: 99999 !important;
+    opacity: 0;
+    transform-origin: left;
+    transition: 0.2s all ease-in;
+    translate: 0 0px;
+    scale: 0;
+}
+
+.discover:hover .discover-info,
+.help:hover .help-info {
+    scale: 1.05;
+    opacity: 1;
+    translate: 0 20px;
+
+}
+
+.bars {
+    transition: 0.3s all ease-in;
+
+    &.close {
+
+        div {
+            transition: 0.3s all ease-in;
+
+            &:nth-child(2) {
+                opacity: 0;
+
+            }
+
+            &:first-child {
+                rotate: 45deg;
+                translate: 0 10px;
+
+            }
+
+            &:last-child {
+                translate: 0 -12px;
+                rotate: -45deg;
+            }
+        }
+    }
+}
+
+aside {
+    padding: 10px 30px;
+}
+
+.active-link-blue {
+    background-color: #239AE7;
+    display: block;
+    width: 100%;
+    padding: 12px;
+    margin-top: 20px;
+    text-align: center;
+    color: white;
+    border-radius: 7px;
+
+    &:hover {
+        background-color: #F67261;
+    }
+}
+
+.active-link-red {
+    background-color: #F67261;
+    display: block;
+    width: 100%;
+    padding: 12px;
+    margin-top: 20px;
+    text-align: center;
+    color: white;
+    border-radius: 7px;
+
+    &:hover {
+        background-color: #239AE7;
+    }
+}
+
+@media (width<576px) {
+    .container {
+        width: 100%;
+        padding: 0 20px;
+    }
+
+}
+
+@media (width>576px) {
+    .container {
+        width: 540px !important;
+
+    }
+
+}
+
+@media (width>768px) {
+    .container {
+        width: 720px !important;
+
+    }
+
+}
+
+@media (width>992px) {
+    .container {
+        width: 960px !important;
+
+    }
+
+}
+
+@media (width>1200px) {
+    .container {
+        width: 1140px !important;
+
+    }
+
+}
+
+@media (width<1000px) {
+    .first-wrapper {
+        background-image: unset !important;
+    }
+}
